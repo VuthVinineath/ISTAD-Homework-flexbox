@@ -1,0 +1,297 @@
+@font-face {
+  font-family: "heebo-regular";
+  src: url(/assests/fonts/Heebo-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "roboto-regular";
+  src: url(/assests/fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: "roboto-light";
+  src: url(/assests/fonts/Roboto-Light.ttf);
+}
+
+@font-face {
+  font-family: "roboto-bold";
+  src: url(/assests/fonts/Roboto-Bold.ttf);
+}
+
+:root {
+  --all-lvl-bg-color: rgba(111, 66, 193, 0.1);
+  --all-lvl-text-color: rgb(111, 66, 193);
+  --icon-star-color: rgb(247, 195, 46);
+  --description-text-color: rgb(116, 117, 121);
+  --title-hover-color: rgb(6, 106, 201);
+  --title-main-color: rgb(36, 41, 45);
+  --bs-card-spacer-x: 1.25rem;
+  --bs-card-spacer-y: 0.5rem;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 3.5%;
+
+  & header {
+    & .title {
+      text-align: center;
+
+      & h1 {
+        font-family: "heebo-regular";
+        font-weight: 700;
+        font-size: 1.8rem;
+        color: var(--title-main-color);
+      }
+
+      & p {
+        font-family: "roboto-regular";
+        font-weight: 300;
+        color: var(--description-text-color);
+        font-size: 0.9rem;
+        line-height: 1.25rem;
+      }
+    }
+
+    & .navigation-bar {
+      margin: var(--bs-card-spacer-x) 0;
+      background-color: rgba(6, 106, 201, 0.1);
+      border-radius: 10px;
+
+      & ul {
+        list-style: none;
+        text-align: start;
+      }
+
+      & ul > li {
+        display: inline-block;
+        color: var(--title-hover-color);
+        margin: 1rem 1.7rem;
+        font-weight: 400;
+        font-family: "heebo-regular";
+        font-size: 0.9rem;
+      }
+
+      & ul > li.active > a {
+        text-decoration: none;
+        color: white;
+        background-color: var(--title-hover-color);
+        padding: 8px 20px;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  & main {
+    margin: 0px;
+
+    & .card-container {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      & .card {
+        box-shadow: 0px 0px 40px rgba(29, 58, 83, 0.15);
+        border-radius: 8px;
+        overflow: hidden;
+        min-width: 100px;
+        margin: 0.7rem 0;
+
+        /* global card class */
+        & .items-justify-container {
+          display: flex;
+          justify-content: space-between;
+          padding: 8.2px 4.4px;
+
+          & .level-text {
+            border-radius: 5px;
+            padding: 2px 8px;
+            text-decoration: none;
+            font-family: "heebo-regular";
+            font-size: 0.8rem;
+          }
+
+          & .all-level {
+            background-color: rgba(111, 66, 193, 0.1);
+            color: rgb(111, 66, 193);
+          }
+
+          & .beginner {
+            background-color: rgba(12, 188, 135, 0.1);
+            color: rgb(12, 188, 135);
+          }
+
+          & .fa-heart {
+            text-decoration: none;
+            color: rgb(214, 41, 62);
+          }
+        }
+
+        & .card-img {
+          max-width: 100%;
+          height: auto;
+        }
+
+        & .card-body {
+          padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+          min-height: 120px;
+
+          & h2 > a {
+            text-decoration: none;
+            color: var(--title-main-color);
+            font-family: "heebo-regular";
+            font-size: 1.25rem;
+            text-align: start;
+            line-height: 25px;
+            font-weight: 500;
+          }
+
+          & h2 > a:hover {
+            color: var(--title-hover-color);
+          }
+
+          & p {
+            color: var(--description-text-color);
+            font-family: "roboto-regular";
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 22.5px;
+            padding: var(--bs-card-spacer-y) 0;
+            text-overflow: ellipsis;
+          }
+
+          & .card-rating-list {
+            list-style: none;
+
+            & .list-item {
+              display: inline-block;
+            }
+
+            & li > i {
+              color: rgb(247, 195, 46);
+              font-size: 0.8rem;
+            }
+
+            & .list-text {
+              margin-left: 10px;
+              font-family: "heebo-regular";
+            }
+          }
+        }
+
+        & .card-footer {
+          padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+
+          & hr {
+            border: none;
+            height: 1px;
+            background-color: #a49e9a;
+            opacity: 0.25;
+          }
+
+          & span > i {
+            padding-right: 5px;
+          }
+
+          & .fa-clock {
+            color: rgb(214, 41, 62);
+          }
+
+          & .fa-table {
+            color: rgb(253, 126, 20);
+          }
+
+          & span {
+            font-family: "heebo-regular";
+            font-weight: 400;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  body {
+    & .card-container {
+      & .card {
+        width: 47%;
+        margin: 0.7rem var(--bs-card-spacer-y) !important;
+
+        & .card-body {
+          min-height: 190px !important;
+
+          & .items-justify-container {
+            padding: 5px 2px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    margin: 0 1.5%;
+    & header {
+      & .navigation-bar {
+        margin: 0 1.5%;
+        & ul {
+          text-align: center;
+        }
+      }
+    }
+    & .card-container {
+      & .card {
+        width: 47%;
+        margin: 0.7rem 0.65rem !important;
+
+        & .card-body {
+          min-height: 180px !important;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  body {
+    margin: 1.5rem 2.5%;
+
+    & header {
+      & .navigation-bar {
+        & ul {
+          margin: var(--bs-card-spacer-x) 0;
+          text-align: center;
+        }
+      }
+    }
+    & .card-container {
+      & .card {
+        width: 30%;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    & .card-container {
+      & .card {
+        width: 22%;
+        margin: 0.7rem 1rem !important;
+
+        & .card-body {
+          min-height: 200px !important;
+        }
+      }
+    }
+  }
+}
