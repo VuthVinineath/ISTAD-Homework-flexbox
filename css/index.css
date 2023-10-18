@@ -1,21 +1,21 @@
 @font-face {
   font-family: "heebo-regular";
-  src: url(/assests/fonts/Heebo-VariableFont_wght.ttf);
+  src: url(../assests/fonts/Heebo-VariableFont_wght.ttf);
 }
 
 @font-face {
   font-family: "roboto-regular";
-  src: url(/assests/fonts/Roboto-Regular.ttf);
+  src: url(../assests/fonts/Roboto-Regular.ttf);
 }
 
 @font-face {
   font-family: "roboto-light";
-  src: url(/assests/fonts/Roboto-Light.ttf);
+  src: url(../assests/fonts/Roboto-Light.ttf);
 }
 
 @font-face {
   font-family: "roboto-bold";
-  src: url(/assests/fonts/Roboto-Bold.ttf);
+  src: url(../assests/fonts/Roboto-Bold.ttf);
 }
 
 :root {
