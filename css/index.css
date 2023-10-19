@@ -285,7 +285,7 @@ body {
   body {
     & .card-container {
       & .card {
-        width: 22%;
+        width: 20%;
         margin: 0.7rem 1rem !important;
 
         & .card-body {
